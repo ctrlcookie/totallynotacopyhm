@@ -77,4 +77,16 @@ public class PlayerMovement : MonoBehaviour
             myRB.velocity = new Vector2(myRB.velocity.x, 0f);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.name.Equals("Platform"))
+            this.transform.parent = col.transform;
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.name.Equals("Platform"))
+            this.transform.parent = null;
+    }
 }
