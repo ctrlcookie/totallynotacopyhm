@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - PatrolPoint
+  - Pickup
   layers:
   - Default
   - TransparentFX
